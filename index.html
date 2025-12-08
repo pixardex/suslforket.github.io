@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SUSL Canteen Menu</title>
+
+    <!-- BOOTSTRAP CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- HEADER -->
+    <nav class="navbar navbar-light navbar-custom shadow-sm">
+        <div class="container">
+            <span class="navbar-brand mb-0 h1 text-white" style="font-size: 1.8rem;">
+                🍽️ SUSL Canteen Menu
+            </span>
+            <small class="text-white-50">Sabaragamuwa University</small>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <!-- CANTEEN SELECTION PAGE -->
+        <div id="canteenSelection">
+            <div class="text-center mb-5">
+                <h2 class="mb-3" style="font-size: 2.5rem; font-weight: bold;">Select Your Canteen</h2>
+                <p class="text-muted" style="font-size: 1.1rem;">Choose where you'd like to eat</p>
+            </div>
+
+            <div class="row" id="canteenGrid">
+                <!-- Canteens will be inserted here -->
+            </div>
+        </div>
+
+        <!-- MENU PAGE -->
+        <div id="menuContent">
+            <!-- Back Button & Header -->
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <button class="btn back-btn px-4 py-2" onclick="backToCanteens()">← Back to Canteens</button>
+                <div class="text-end">
+                    <h2 id="canteenTitle" class="mb-1"></h2>
+                    <p id="canteenDesc" class="text-muted mb-0"></p>
+                </div>
+            </div>
+
+            <!-- Search Bar -->
+            <div class="mb-4">
+                <input 
+                    type="text" 
+                    class="form-control search-input" 
+                    id="searchInput"
+                    placeholder="🔍 Search menu items..." 
+                    style="padding: 12px 15px; font-size: 1rem;"
+                    onkeyup="filterItems()"
+                >
+            </div>
+
+            <!-- Category Filters -->
+            <div class="mb-4" id="categoryContainer">
+                <!-- Categories will be inserted here -->
+            </div>
+
+            <!-- Menu Items Grid -->
+            <div class="row" id="menuGrid">
+                <!-- Menu items will be inserted here -->
+            </div>
+
+            <div id="noItemsMsg" class="text-center py-5" style="display: none;">
+                <p class="text-muted" style="font-size: 1.1rem;">No items found. Try a different search!</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- BOOTSTRAP JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP8zuIYLNYjjLtWvVkrsXnrDF59eUlmsPfM" crossorigin="anonymous"></script>
+    
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
