@@ -1,0 +1,96 @@
+body {
+    background: linear-gradient(135deg, #fff5e6 0%, #fffaed 100%);
+    min-height: 100vh;
+}
+
+.navbar-custom {
+    background: linear-gradient(90deg, #ff6b35 0%, #d63031 100%);
+}
+
+.canteen-btn {
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    background-color: white;
+}
+
+.canteen-btn:hover {
+    transform: scale(1.05);
+    border-color: #ff6b35;
+    box-shadow: 0 10px 25px rgba(255, 107, 53, 0.2);
+}
+
+.menu-card {
+    transition: all 0.3s ease;
+    border-left: 4px solid #ff6b35;
+    background-color: white;
+}
+
+.menu-card:hover {
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    transform: translateY(-5px);
+}
+
+.category-btn {
+    transition: all 0.2s ease;
+}
+
+.category-btn.active {
+    background-color: #ff6b35;
+    border-color: #ff6b35;
+    color: white;
+}
+
+.category-btn.inactive {
+    background-color: white;
+    border: 2px solid #ddd;
+    color: #333;
+}
+
+.category-btn.inactive:hover {
+    border-color: #ff6b35;
+}
+
+.price-tag {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ff6b35;
+}
+
+.back-btn {
+    border: 2px solid #ff6b35;
+    color: #ff6b35;
+}
+
+.back-btn:hover {
+    background-color: #ff6b35;
+    color: white;
+}
+
+.search-input {
+    border: 2px solid #ddd;
+    transition: border-color 0.3s ease;
+}
+
+.search-input:focus {
+    border-color: #ff6b35;
+    outline: none;
+    box-shadow: 0 0 0 0.2rem rgba(255, 107, 53, 0.25);
+}
+
+.icon-large {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.canteen-btn:hover .icon-large {
+    transform: scale(1.2);
+}
+
+#menuContent {
+    display: none;
+}
+
+#canteenSelection {
+    display: block;
+}
