@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ForkLet - Smart Campus Dining at SUSL</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-custom">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <i class="fas fa-utensils"></i> ForkLet
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#how-it-works">How It Works</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#map">Location</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+                <button class="btn cta-btn ms-3">Order Now</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 hero-content">
+                    <p style="color: #ff6b35; font-weight: 600; font-size: 1.1rem; margin-bottom: 0.5rem;">Welcome to ForkLet</p>
+                    <h1>Smart Dining<br>Starts Here</h1>
+                    <p class="hero-subtitle">ForkLet (SUSL Edition) is a smart digital canteen management and food-ordering platform designed specifically for the campus environment of Sabaragamuwa University of Sri Lanka. Modernize your dining experience by browsing menus, selecting meals, making payments, and placing orders with pickup—all in one platform. No more waiting in long queues!</p>
+                    <button class="cta-btn"><i class="fas fa-arrow-right"></i> Order Your Meal Now</button>
+                </div>
+                <div class="col-lg-6 hero-image text-center">
+                    <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%; height: auto;">
+                        <circle cx="200" cy="200" r="180" fill="#ff6b35" opacity="0.1"/>
+                        <circle cx="200" cy="200" r="120" fill="white"/>
+                        <ellipse cx="200" cy="180" rx="80" ry="90" fill="#ffa500"/>
+                        <circle cx="170" cy="160" r="8" fill="#d63031"/>
+                        <circle cx="230" cy="170" r="8" fill="#d63031"/>
+                        <circle cx="190" cy="200" r="6" fill="#90ee90"/>
+                        <circle cx="210" cy="205" r="6" fill="#90ee90"/>
+                        <path d="M 150 220 Q 200 250 250 220" stroke="#ff6b35" stroke-width="4" fill="none" stroke-linecap="round"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="how-it-works" id="how-it-works">
+        <div class="container">
+            <div class="section-title">
+                <p class="section-subtitle">let's try ForkLet</p>
+                <h2>How ForkLet Works</h2>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="how-card">
+                        <div class="how-card-icon">📱</div>
+                        <h3>Browse Menus</h3>
+                        <p>Easily browse through all available canteens and their daily menus in one place</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="how-card">
+                        <div class="how-card-icon">🛒</div>
+                        <h3>Select Meals</h3>
+                        <p>Choose your favorite dishes from multiple canteens and customize your order</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="how-card">
+                        <div class="how-card-icon">💳</div>
+                        <h3>Make Payment</h3>
+                        <p>Secure payment options to complete your order quickly and easily</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="how-card">
+                        <div class="how-card-icon">🎁</div>
+                        <h3>Quick Pickup</h3>
+                        <p>Grab your meal at the designated pickup point—no more waiting in queues</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <div class="section-title">
+                <p class="section-subtitle">Built for Convenience, Made for You</p>
+                <h2>Why Choose ForkLet</h2>
+            </div>
+            <div class="feature-grid">
+                <div class="feature-item">
+                    <div class="feature-icon"><i class="fas fa-clock"></i></div>
+                    <h3>Save Time</h3>
+                    <p>Skip long queues and order your meal in seconds. Your time is valuable!</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon"><i class="fas fa-list"></i></div>
+                    <h3>Wide Selection</h3>
+                    <p>Access menus from multiple canteens and choose from diverse food options</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon"><i class="fas fa-check-circle"></i></div>
+                    <h3>Easy to Use</h3>
+                    <p>Intuitive interface designed specifically for busy student life</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon"><i class="fas fa-lock"></i></div>
+                    <h3>Secure Payments</h3>
+                    <p>Safe and reliable payment processing for all your orders</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon"><i class="fas fa-leaf"></i></div>
+                    <h3>Healthy Options</h3>
+                    <p>View nutritional information and choose healthy meal options</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon"><i class="fas fa-bell"></i></div>
+                    <h3>Real-time Notifications</h3>
+                    <p>Get instant updates on your order status and pickup readiness</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-title">
+                <p class="section-subtitle">Real Voices, Real Experiences</p>
+                <h2>Hear It From Our Users</h2>
+            </div>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-avatar">👨‍🎓</div>
+                    <h4 class="testimonial-name">Akash Kumar</h4>
+                    <p class="testimonial-role">3rd Year Engineering</p>
+                    <p class="testimonial-text">"ForkLet saved me so much time! No more skipping meals because of long queues. Highly recommend!"</p>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-avatar">👩‍🎓</div>
+                    <h4 class="testimonial-name">Priya Sharma</h4>
+                    <p class="testimonial-role">2nd Year Commerce</p>
+                    <p class="testimonial-text">"The app is so easy to use. I can order my lunch while attending lectures!"</p>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-avatar">👨‍🏫</div>
+                    <h4 class="testimonial-name">Dr. Rajesh Patel</h4>
+                    <p class="testimonial-role">Faculty Member</p>
+                    <p class="testimonial-text">"Great initiative! Makes campus life more convenient for everyone."</p>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-avatar">👩‍💼</div>
+                    <h4 class="testimonial-name">Sara Williams</h4>
+                    <p class="testimonial-role">Campus Staff</p>
+                    <p class="testimonial-text">"The payment system is smooth and secure. Perfect for busy days!"</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section" id="map">
+        <div class="container">
+            <div class="section-title">
+                <p class="section-subtitle">Find Us</p>
+                <h2>Campus Canteens Location</h2>
+            </div>
+            <div id="campusMap"></div>
+            <div class="map-info">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3>ForkLet Service Areas</h3>
+                        <div class="info-item">
+                            <div class="info-icon"><i class="fas fa-map-marker-alt"></i></div>
+                            <div class="info-text">
+                                <h4>Hela Bojun Hala</h4>
+                                <p>Traditional Sri Lankan Food Market - Building A</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-icon"><i class="fas fa-map-marker-alt"></i></div>
+                            <div class="info-text">
+                                <h4>Main Canteen (Matta)</h4>
+                                <p>University Main Canteen - Central Campus</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-icon"><i class="fas fa-map-marker-alt"></i></div>
+                            <div class="info-text">
+                                <h4>Juice Bar</h4>
+                                <p>Fresh Beverages - Student Center</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="info-item">
+                            <div class="info-icon"><i class="fas fa-clock"></i></div>
+                            <div class="info-text">
+                                <h4>Operating Hours</h4>
+                                <p>Monday - Friday: 7:00 AM - 8:00 PM</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-icon"><i class="fas fa-phone"></i></div>
+                            <div class="info-text">
+                                <h4>Contact</h4>
+                                <p>+94 (0) 45 2257 000</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-icon"><i class="fas fa-envelope"></i></div>
+                            <div class="info-text">
+                                <h4>Email</h4>
+                                <p>support@forklet.susl.edu.lk</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4><i class="fas fa-utensils"></i> ForkLet</h4>
+                    <p>Smart dining solutions for Sabaragamuwa University of Sri Lanka. Making campus food ordering easier, faster, and better.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <p><a href="#how-it-works">How It Works</a></p>
+                    <p><a href="#features">Features</a></p>
+                    <p><a href="#map">Location</a></p>
+                    <p><a href="#">Privacy Policy</a></p>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p><i class="fas fa-phone"></i> +94 (0) 45 2257 000</p>
+                    <p><i class="fas fa-envelope"></i> support@forklet.susl.edu.lk</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Sabaragamuwa University<br>Sri Lanka</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <p><a href="#"><i class="fab fa-facebook"></i> Facebook</a></p>
+                    <p><a href="#"><i class="fab fa-instagram"></i> Instagram</a></p>
+                    <p><a href="#"><i class="fab fa-twitter"></i> Twitter</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 ForkLet - SUSL Edition. All rights reserved. | Designed with <span style="color: #ff6b35;">❤</span> for Smart Campus Dining</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
